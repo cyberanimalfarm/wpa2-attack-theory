@@ -76,7 +76,7 @@ The WPA/WPA2 4-way handshake is a fundamental step in the Wi-Fi authentication p
 
 The 4-way handshake ensures mutual knowledge of the pre-shared key without direct transmission and agrees on a fresh session key for encrypted communications. The feasibility of a cracking attempt hinges on computing the correct MIC using a guessed PSK.
 
-##Message Pair Priority
+## Message Pair Priority
 
 To retrieve a valid PSK using hashcat (or similar tools), you need at least a part of the 4-way handshake because the handshake contains all the necessary data (nonces, MAC addresses, MIC, etc.) to validate a guessed PSK. 
 
@@ -103,7 +103,7 @@ Considering the different possibilities, here's a prioritized list:
 
 Remember, the effectiveness of PSK cracking doesn't just depend on having the right handshake messages. The complexity of the PSK, the dictionary used for attacks, and the computational power available are all factors that influence the success of the retrieval attempt.
 
-##Hashcat 22000 Format
+## Hashcat 22000 Format
 
 ### PMKID Version (01):
 
@@ -190,7 +190,7 @@ Now, here's how the MIC becomes crucial in exploiting the client to retrieve the
 
 It's worth noting that WPA3, which uses Simultaneous Authentication of Equals (SAE), offer protection against these types of offline dictionary attacks.
 
-###ANonce & SNonce
+## ANonce & SNonce
 
 The ANonce (Authenticator Nonce) and SNonce (Supplicant Nonce) play vital roles in the EAPOL process. Here's a step-by-step breakdown of how these nonce values change during the handshake:
 
